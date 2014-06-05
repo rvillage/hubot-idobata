@@ -36,5 +36,5 @@ module.exports = (robot) ->
       prNum = body.split('\{\"url\"').length - 1
       if prNum > 0
         # [TODO] string to arrayをスマートにしたい
-        send process.env.HUBOT_IDOBATA_ROOM_ID, "@all\nそろそろレビュータイムだわー。#{prNum} 件あるけど、余裕だよね？\nじっくり確認して11時から本気出す！\nhttps://github.com/#{process.env.HUBOT_GITHUB_ORGANIZATION}/#{process.env.HUBOT_GITHUB_REPOSITORY}/pulls"
+        send process.env.HUBOT_IDOBATA_ROOM_ID, "@all\nレビュータイム デス\n#{prNum} ケン ノ プルリクエスト ガ アリマス\nhttps://github.com/#{process.env.HUBOT_GITHUB_ORGANIZATION}/#{process.env.HUBOT_GITHUB_REPOSITORY}/pulls"
   ).start()
