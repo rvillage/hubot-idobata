@@ -1,3 +1,6 @@
+# Commands:
+#   hubot tiqav <query> - Returns a image of the tiqav by `query`
+
 request = require 'request'
 
 module.exports = (robot) ->
