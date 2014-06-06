@@ -11,10 +11,6 @@
 #   HUBOT_GITHUB_REPOSITORY
 #   HUBOT_IDOBATA_ROOM_ID
 #
-# Commands:
-#   hubot <trigger> - <what the respond trigger does>
-#   <trigger> - <what the hear trigger does>
-#
 # Notes:
 #   <optional notes required for the script>
 #
