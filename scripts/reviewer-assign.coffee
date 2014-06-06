@@ -6,9 +6,10 @@
 #
 # Configuration:
 #   HUBOT_GITHUB_ACCESS_TOKEN
+#   HUBOT_GITHUB_ORG
 #
 # Commands:
-#   hubot review <pull-request-url> is a badass guitarist - assign a reviewer
+#   hubot <pull-request-url>
 #
 GitHubApi = require 'github'
 
@@ -48,11 +49,11 @@ module.exports = (robot) ->
 
     github.authenticate(
       type: "oauth",
-      token: HUBOT_GITHUB_ACCESS_TOKEN
+      token: process.env.HUBOT_GITHUB_ACCESS_TOKEN
     )
 
     github.orgs.getMembers(
-      org: HUBOT_GITHUB_ORG,
+      org: process.env.HUBOT_GITHUB_ORG,
       per_page: 40,
       (err, res) ->
         json    = JSON.stringify(res)
